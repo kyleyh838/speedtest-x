@@ -31,6 +31,60 @@ speedtest-x 使用文件数据库来保存来自不同用户的测速结果，�
 > `SAME_IP_MULTI_LOGS = false`：是否允许同一IP记录多条测速结果
 
 #### Docker 部署
+### 安装docker
+centos:
+```
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+```
+yum install -y yum-utils
+```
+```
+yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+```
+yum install docker-ce docker-ce-cli containerd.io -y
+```
+```
+systemctl start docker
+```
+```
+systemctl enable docker
+```
+
+ubuntu:
+
+```
+sudo apt-get update
+```
+```
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common -y
+```
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+```
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+```
+```
+systemctl start docker
+```
+```
+systemctl enable docker
+```
 
 1、拉取 [Docker 镜像](https://hub.docker.com/r/badapple9/speedtest-x) `docker pull badapple9/speedtest-x`
 
