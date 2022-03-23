@@ -34,18 +34,18 @@ speedtest-x 使用文件数据库来保存来自不同用户的测速结果，�
 #### 安装docker
 centos:
 ```
-yum install -y yum-utils
-```
-```
-yum install docker-ce docker-ce-cli containerd.io -y
-```
-```
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+```
+yum install -y yum-utils
 ```
 ```
 yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
+```
+```
+yum install docker-ce docker-ce-cli containerd.io -y
 ```
 ```
 systemctl start docker
