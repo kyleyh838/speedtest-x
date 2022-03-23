@@ -30,8 +30,8 @@ speedtest-x 使用文件数据库来保存来自不同用户的测速结果，�
 >
 > `SAME_IP_MULTI_LOGS = false`：是否允许同一IP记录多条测速结果
 
-#### Docker 部署
-### 安装docker
+### Docker 部署
+#### 安装docker
 centos:
 ```
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
@@ -90,13 +90,13 @@ systemctl enable docker
 
   (**ARM 架构的机器，执行 `docker pull stilleshan/speedtest-x`**，ARM 镜像由热心网友制作)
 
-2、运行容器 `docker run -d -p 9001:80 -it badapple9/speedtest-x`   
+2、运行容器 `docker run -d -p 8975:80 -it badapple9/speedtest-x`   
 
-  (**ARM 架构的机器，运行 `docker run -d -p 9001:80 -it stilleshan/speedtest-x`**)
+  (**ARM 架构的机器，运行 `docker run -d -p 8975:80 -it stilleshan/speedtest-x`**)
 
 > **-d**：以常驻进程模式启动
 >
-> **9001**: 默认容器开放端口，可改为其他端口
+> **8975**: 默认容器开放端口，可改为其他端口
 >
 > 启动时可指定的环境变量：
 >
